@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	</head>
 <body>
-<h2 id="Title"></h2>
-<h1 id="Result"></h1>
+	<div class="container text-left" style="padding: 40px">
+		<div class="row">
+			<div class="col-sm-1 col-md-1"></div>
+			<div class="col-sm-5 col-md-6">.<h2 id="Title"></h2></div>
+			<div class="col-sm-1 col-md-1"></div>
+		</div>	
+		<div class="row">
+			<div class="col-sm-1 col-md-1"></div>
+			<div class="col-sm-5 col-md-6"><div style="text-align:left"><h1 id="Result"></h1></div</div>
+			<div class="col-sm-1 col-md-1"></div>
+		</div>	
+	</div>
+	
+	
 
-<script>
-const wantToSit = 1;
-const restaurant_sit = ['奇華','小廚港作','飲食男女','譚仔','樂天冰室','Baron','為食雞','金亞萊','友利冰室x勿當奴','牛寶寶'];
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+	</script>
+	<script>
+	const wantToSit = 1;
+	const restaurant_sit = ['奇華','小廚港作','飲食男女','譚仔','樂天冰室','Baron','為食雞','金亞萊','友利冰室x勿當奴','牛寶寶'];
 
-let msg = '';
-let name = [];
-let randomNum = 0;
+	let msg = '';
+	let name = [];
+	let randomNum = 0;
 
-if (wantToSit == 1){
-	document.getElementById("Title").innerHTML = '堂食';
-}
+	if (wantToSit == 1){
+		document.getElementById("Title").innerHTML = '堂食';
+	}
 
-for (let i = 1; i <= 8; i++) {
-  randomNum = Math.floor(Math.random() * restaurant_sit.length);
-  console.log('randomNum: ' + randomNum);
-  name[i] = restaurant_sit[randomNum];
-  msg = msg + i + ") " + name[i] + "<br>";
-}
+	for (let i = 1; i <= 8; i++) {
+	  randomNum = Math.floor(Math.random() * restaurant_sit.length);
+	  console.log('randomNum: ' + randomNum);
+	  name[i] = restaurant_sit[randomNum];
+	  msg = msg + i + ". " + name[i] + "<br>";
+	}
 
-document.getElementById("Result").innerHTML = msg;
-</script>
+	document.getElementById("Result").innerHTML = msg;
+	</script>
 
 </body>
 </html>
