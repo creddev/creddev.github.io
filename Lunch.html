@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<body>
+<h2 id="Title"></h2>
+<h1 id="Result"></h1>
+
+<script>
+const wantToSit = 1;
+const restaurant_sit = ['奇華','小廚港作','飲食男女','譚仔','樂天冰室','Baron','為食雞','金亞萊','友利冰室x勿當奴','牛寶寶'];
+
+let msg = '';
+let name = [];
+let randomNum = 0;
+
+if (wantToSit == 1){
+	document.getElementById("Title").innerHTML = '堂食';
+}
+
+for (let i = 1; i <= 8; i++) {
+  randomNum = Math.floor(Math.random() * restaurant_sit.length);
+  console.log('randomNum: ' + randomNum);
+  name[i] = restaurant_sit[randomNum];
+  msg = msg + i + ") " + name[i] + "<br>";
+}
+
+document.getElementById("Result").innerHTML = msg;
+</script>
+
+</body>
+</html>
